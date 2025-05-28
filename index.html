@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Quiz Master</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>DSA Quiz Master</h1>
+            <p>Test your Data Structures & Algorithms knowledge</p>
+        </header>
+
+        <div class="quiz-container" id="quizContainer">
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Score:</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Question:</span>
+                    <span class="value" id="questionNumber">1</span>
+                    <span class="total">/ <span id="totalQuestions">10</span></span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Accuracy:</span>
+                    <span class="value" id="accuracy">0%</span>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-header">
+                    <span class="difficulty-badge" id="difficulty">Medium</span>
+                    <span class="category-badge" id="category">Arrays</span>
+                </div>
+                
+                <div class="question-content">
+                    <h2 id="questionText">Loading question...</h2>
+                    <div class="code-block" id="codeBlock" style="display: none;">
+                        <pre><code id="codeContent"></code></pre>
+                    </div>
+                </div>
+
+                <div class="options-container" id="optionsContainer">
+                    <!-- Options will be dynamically loaded -->
+                </div>
+
+                <div class="feedback-container" id="feedbackContainer" style="display: none;">
+                    <div class="feedback-content">
+                        <div class="feedback-icon" id="feedbackIcon"></div>
+                        <div class="feedback-text" id="feedbackText"></div>
+                        <div class="explanation" id="explanation"></div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="submitBtn" disabled>Submit Answer</button>
+                    <button class="btn btn-secondary" id="nextBtn" style="display: none;">Next Question</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-container" id="resultsContainer" style="display: none;">
+            <div class="results-content">
+                <h2>Quiz Complete!</h2>
+                <div class="final-score">
+                    <div class="score-circle">
+                        <span id="finalScore">0</span>
+                        <span class="score-total">/ <span id="finalTotal">10</span></span>
+                    </div>
+                    <div class="accuracy-display">
+                        <span id="finalAccuracy">0%</span> Accuracy
+                    </div>
+                </div>
+                
+                <div class="performance-breakdown">
+                    <h3>Performance Breakdown</h3>
+                    <div class="breakdown-grid" id="breakdownGrid">
+                        <!-- Performance data will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="restartBtn">Start New Quiz</button>
+                    <button class="btn btn-secondary" id="reviewBtn">Review Answers</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="spinner"></div>
+            <p>Loading next question...</p>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

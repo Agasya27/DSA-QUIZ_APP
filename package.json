@@ -1,0 +1,20 @@
+{
+  "name": "dsa-quiz-master",
+  "version": "1.0.0",
+  "description": "Interactive DSA Quiz Application with instant feedback and scoring",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "dsa",
+    "quiz",
+    "data-structures",
+    "algorithms",
+    "javascript",
+    "education"
+  ],
+  "author": "OpenHands",
+  "license": "MIT"
+}

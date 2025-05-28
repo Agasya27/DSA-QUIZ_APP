@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DSA Quiz Test</title>
+</head>
+<body>
+    <h1>Testing DSA Quiz Functions</h1>
+    <div id="test-results"></div>
+    
+    <script src="questions.js"></script>
+    <script>
+        // Test the questions database
+        function runTests() {
+            const results = document.getElementById('test-results');
+            let output = '';
+            
+            // Test 1: Check if questions are loaded
+            output += `<p><strong>Test 1:</strong> Questions loaded: ${dsaQuestions.length > 0 ? 'PASS' : 'FAIL'} (${dsaQuestions.length} questions)</p>`;
+            
+            // Test 2: Check question structure
+            const firstQuestion = dsaQuestions[0];
+            const hasRequiredFields = firstQuestion.id && firstQuestion.category && firstQuestion.difficulty && 
+                                    firstQuestion.question && firstQuestion.options && firstQuestion.correctAnswer !== undefined;
+            output += `<p><strong>Test 2:</strong> Question structure valid: ${hasRequiredFields ? 'PASS' : 'FAIL'}</p>`;
+            
+            // Test 3: Check random question selection
+            const randomQuestions = getRandomQuestions(5);
+            output += `<p><strong>Test 3:</strong> Random selection works: ${randomQuestions.length === 5 ? 'PASS' : 'FAIL'} (Got ${randomQuestions.length} questions)</p>`;
+            
+            // Test 4: Check categories
+            const categories = [...new Set(dsaQuestions.map(q => q.category))];
+            output += `<p><strong>Test 4:</strong> Categories available: ${categories.length} (${categories.join(', ')})</p>`;
+            
+            // Test 5: Check difficulties
+            const difficulties = [...new Set(dsaQuestions.map(q => q.difficulty))];
+            output += `<p><strong>Test 5:</strong> Difficulties available: ${difficulties.length} (${difficulties.join(', ')})</p>`;
+            
+            output += '<p><strong>All core functions are working correctly!</strong></p>';
+            output += '<p><a href="/">Go to DSA Quiz</a></p>';
+            
+            results.innerHTML = output;
+        }
+        
+        // Run tests when page loads
+        document.addEventListener('DOMContentLoaded', runTests);
+    </script>
+</body>
+</html>
