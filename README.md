@@ -41,7 +41,7 @@ An interactive JavaScript application for testing Data Structures and Algorithms
 ### Frontend Technologies
 - **HTML5**: Semantic markup structure
 - **CSS3**: Modern styling with flexbox/grid, animations, and responsive design
-- **Vanilla JavaScript**: ES6+ features, modular class-based architecture
+- **JavaScript**: modular class-based architecture
 
 ### Key Components
 - **DSAQuiz Class**: Main application controller
@@ -81,8 +81,7 @@ An interactive JavaScript application for testing Data Structures and Algorithms
 
 3. **Access the application**:
    - Local: `http://localhost:12000`
-   - Production: `https://work-1-fvvjuexgjtonwluo.prod-runtime.all-hands.dev`
-
+   
 ## How to Use
 
 1. **Start Quiz**: The application automatically loads with the first question
@@ -103,80 +102,3 @@ Each question includes:
 - **Multiple Choice Options**: 4 options with clear explanations
 - **Detailed Explanation**: Comprehensive explanation of the correct answer
 
-## Customization
-
-### Adding New Questions
-Edit `questions.js` to add new questions following this format:
-
-```javascript
-{
-    id: unique_id,
-    category: "Category Name",
-    difficulty: "easy|medium|hard",
-    question: "Your question text",
-    code: "Optional code snippet", // optional
-    options: [
-        "Option A",
-        "Option B", 
-        "Option C",
-        "Option D"
-    ],
-    correctAnswer: 0, // index of correct option
-    explanation: "Detailed explanation of the answer"
-}
-```
-
-### Styling Customization
-Modify `styles.css` to customize:
-- Color schemes
-- Typography
-- Layout and spacing
-- Animations and transitions
-- Responsive breakpoints
-
-### Functionality Extensions
-Extend `app.js` to add:
-- Different quiz modes (timed, unlimited, etc.)
-- User authentication and progress saving
-- Leaderboards
-- Additional question types
-- Export functionality for results
-
-## Browser Compatibility
-
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
-
-## Performance Features
-
-- **Efficient DOM Manipulation**: Minimal reflows and repaints
-- **Optimized Loading**: Questions loaded dynamically to reduce initial load time
-- **Responsive Images**: Optimized for different screen sizes
-- **Smooth Animations**: CSS transitions for better user experience
-
-## Educational Value
-
-This quiz application helps users:
-- **Assess Knowledge**: Test understanding of fundamental DSA concepts
-- **Learn Through Feedback**: Detailed explanations reinforce learning
-- **Track Progress**: Monitor improvement over time
-- **Identify Weak Areas**: Category-based performance analysis
-- **Practice Regularly**: Randomized questions for repeated practice
-
-## Future Enhancements
-
-Potential improvements:
-- User accounts and progress tracking
-- Adaptive difficulty based on performance
-- Timed quiz modes
-- More question types (drag-and-drop, code completion)
-- Integration with coding platforms
-- Social features (sharing scores, challenges)
-- Offline mode support
-- Advanced analytics and insights
-
-## License
-
-MIT License - feel free to use and modify for educational purposes.
